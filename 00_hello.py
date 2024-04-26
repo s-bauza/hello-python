@@ -16,3 +16,4 @@ print(type(5)) #<class 'int'>
 print(type(5.0)) #<class 'float'>
 print(type(1j)) #<class 'complex'>
 print(type(True)) #<class 'bool'>
+print(type(print("My String"))) #<class 'NoneType'>
