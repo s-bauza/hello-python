@@ -1,9 +1,8 @@
 
-### Módulo para pruebas ###
+# Modules for testing
 
-def sumValue(numberOne, numberTwo, numberThree):
-    print(numberOne + numberTwo + numberThree)
-
+def sumValue(a, b):
+    return a + b
 
 def printValue(value):
     print(value)

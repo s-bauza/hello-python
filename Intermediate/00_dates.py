@@ -1,12 +1,9 @@
 
-### Dates ###
+# Dates
 
 # Date time
 
-from datetime import timedelta
-from datetime import date
-from datetime import time
-from datetime import datetime
+from datetime import timedelta, date, time, datetime
 
 now = datetime.now()
 
@@ -23,12 +20,11 @@ def print_date(date):
 
 print_date(now)
 
-year_2023 = datetime(2023, 1, 1)
+year_2024 = datetime(2024, 1, 1)
 
-print_date(year_2023)
+print_date(year_2024)
 
 # Time
-
 
 current_time = time(21, 6, 0)
 
@@ -38,14 +34,13 @@ print(current_time.second)
 
 # Date
 
-
 current_date = date.today()
 
 print(current_date.year)
 print(current_date.month)
 print(current_date.day)
 
-current_date = date(2022, 10, 6)
+current_date = date(2024, 1, 1)
 
 print(current_date.year)
 print(current_date.month)
@@ -56,19 +51,18 @@ current_date = date(current_date.year,
 
 print(current_date.month)
 
-# Operaciones con fechas
+# Dates operations
 
-diff = year_2023 - now
+diff = year_2024 - now
 print(diff)
 
-diff = year_2023.date() - current_date
+diff = year_2024.date() - current_date
 print(diff)
 
 # Timedelta
 
-
-start_timedelta = timedelta(200, 100, 100, weeks=10)
-end_timedelta = timedelta(300, 100, 100, weeks=13)
+start_timedelta = timedelta(200,100,100,weeks=10)
+end_timedelta = timedelta(300,100,100,weeks=13)
 
 print(end_timedelta - start_timedelta)
 print(end_timedelta + start_timedelta)

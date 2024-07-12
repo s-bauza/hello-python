@@ -1,40 +1,41 @@
+# Classes
 
-### Classes ###
+# Define a class
 
-# Definición
+class MyEmptyClass:
+    pass # empty class
 
-class MyEmptyPerson:
-    pass  # Para poder dejar la clase vacía
+print(MyEmptyClass)
+print(MyEmptyClass()) 
 
-
-print(MyEmptyPerson)
-print(MyEmptyPerson())
-
-# Clase con constructor, funciones y popiedades privadas y públicas
-
+# Class with constructor,  destructor, methods and  private and public attributes
 
 class Person:
-    def __init__(self, name, surname, alias="Sin alias"):
-        self.full_name = f"{name} {surname} ({alias})"  # Propiedad pública
-        self.__name = name  # Propiedad privada
-
+    def __init__(self, name, surname, alias='Without alias'):
+        self.full_name = f'{name} {surname} ({alias})' # public attribute
+        self._name = name # protected / private attribute
+    
+    def __del__(self):
+        print("Destructor called")
+    
     def get_name(self):
-        return self.__name
-
+        return self._name
+    
     def walk(self):
-        print(f"{self.full_name} está caminando")
+        print(f'{self._name} is walking')
+        
+person = Person('Santi', 'Bauzá')	
 
+print(person.full_name)
+print(person.get_name())
+person.walk()
 
-my_person = Person("Brais", "Moure")
-print(my_person.full_name)
-print(my_person.get_name())
-my_person.walk()
+person2 = Person('Santi', 'Bauzá','Tigretoon')
+print(person2.full_name)
+print(person2.get_name())
+person2.full_name = 'Santi Bauzá el más (grande de todos)'
+print(person2.full_name)
 
-my_other_person = Person("Brais", "Moure", "MoureDev")
-print(my_other_person.full_name)
-my_other_person.walk()
-my_other_person.full_name = "Héctor de León (El loco de los perros)"
-print(my_other_person.full_name)
-
-my_other_person.full_name = 666
-print(my_other_person.full_name)
+person2.full_name = 666
+print(person2.full_name)
+print(person2.get_name())

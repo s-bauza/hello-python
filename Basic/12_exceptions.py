@@ -1,49 +1,45 @@
-
-### Exception Handling ###
+# Exceptions
 
 numberOne = 5
 numberTwo = 1
-numberTwo = "1"
+numberTwo = '1'
 
-# Excepción base: try except
+# Exception base: try, except
 
 try:
-    print(numberOne + numberTwo)
-    print("No se ha producido un error")
+    print(numberOne + numberTwo)   
+    print('This line will not be executed')
 except:
-    # Se ejecuta si se produce una excepción
-    print("Se ha producido un error")
-
-# Flujo completo de una excepción: try except else finally
+    print('An exception occurred')
+    
+# A flow exception block
 
 try:
-    print(numberOne + numberTwo)
-    print("No se ha producido un error")
+    print(numberOne + numberTwo)   
+    print('This line will not be executed')
 except:
-    print("Se ha producido un error")
-else:  # Opcional
-    # Se ejecuta si no se produce una excepción
-    print("La ejecución continúa correctamente")
-finally:  # Opcional
-    # Se ejecuta siempre
-    print("La ejecución continúa")
-
-# Excepciones por tipo
+    print('An exception occurred')
+else:
+    print('The exception block continues')
+finally:
+    print('This block will always be executed')
+    
+# Specific exception block
 
 try:
-    print(numberOne + numberTwo)
-    print("No se ha producido un error")
+    print(numberOne + numberTwo)   
+    print('This line will not be executed')
 except ValueError:
-    print("Se ha producido un ValueError")
+    print('A ValueError occurred')  
 except TypeError:
-    print("Se ha producido un TypeError")
-
-# Captura de la información de la excepción
+    print('A TypeError occurred')
+    
+# Capture the exception object
 
 try:
-    print(numberOne + numberTwo)
-    print("No se ha producido un error")
-except ValueError as error:
-    print(error)
-except Exception as my_random_error_name:
-    print(my_random_error_name)
+    print(numberOne + numberTwo)   
+    print('This line will not be executed')
+except TypeError as error:
+    print('An exception occurred:', error)
+except Exception as my_random_error_object:
+    print('An exception occurred:', my_random_error_object)

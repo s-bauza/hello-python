@@ -1,59 +1,54 @@
+# Loops
 
-### Loops ###
-
-# While
+# While loop
 
 my_condition = 0
 
-while my_condition < 10:
-    print(my_condition)
-    my_condition += 2
-else:  # Es opcional
-    print("Mi condición es mayor o igual que 10")
-
-print("La ejecución continúa")
-
-while my_condition < 20:
+while my_condition < 5:
+    print('The condition is:', my_condition)
     my_condition += 1
-    if my_condition == 15:
-        print("Se detiene la ejecución")
+else:
+    print('The condition is bigger than 5')
+    
+print('The execution continues...')
+
+while my_condition < 10:
+    my_condition += 1
+    if my_condition == 7:
+        print('The condition stopped')
         break
-    print(my_condition)
+    print('The condition is:', my_condition)
+    
+# For loop
 
-print("La ejecución continúa")
-
-# For
-
-my_list = [35, 24, 62, 52, 30, 30, 17]
+my_list = [1, 2, 3, 4, 5]
 
 for element in my_list:
-    print(element)
-
-my_tuple = (35, 1.77, "Brais", "Moure", "Brais")
+    print('The element is:', element)
+    
+my_tuple = (27, 1.68, 'Santi', 'Bauzá')
 
 for element in my_tuple:
-    print(element)
-
-my_set = {"Brais", "Moure", 35}
+    print('The element is:', element)
+    
+my_set = {27, 1.68, 'Santi', 'Bauzá'}
 
 for element in my_set:
-    print(element)
+    print('The element is:', element)
 
-my_dict = {"Nombre": "Brais", "Apellido": "Moure", "Edad": 35, 1: "Python"}
-
-for element in my_dict:
-    print(element)
-    if element == "Edad":
+my_dict = {'yellow': 'banana', 'red': 'apple', 'green': 'pear'}
+ 
+for key in my_dict:
+    print('The key is:', key)
+    if key == 'red':
         break
 else:
-    print("El bluce for para diccionario ha finalizado")
+    print('The dictionary loop finished')
 
-print("La ejecución continúa")
-
-for element in my_dict:
-    print(element)
-    if element == "Edad":
+for key in my_dict:
+    print('The key is:', key)
+    if key == 'red':
         continue
-    print("Se ejecuta")
+    print('Executing the continue block')
 else:
-    print("El bluce for para diccionario ha finalizado")
+    print('The dictionary loop finished')
